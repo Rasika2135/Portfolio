@@ -19,8 +19,20 @@ window.onscroll = () => {
         }
     })
 }
+
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
 
+function sendEmail() {
+
+    var email = 'rasikasuryawanshi24@email.com';
+    var subject = 'Subject';
+    var body = 'Hello,';
+
+
+    var mailtoUrl = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoUrl;
+}
