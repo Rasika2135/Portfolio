@@ -32,3 +32,4 @@ function sendEmail() {
     var mailtoUrl = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     window.location.href = mailtoUrl;
 }
+
