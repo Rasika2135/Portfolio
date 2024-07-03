@@ -93,8 +93,8 @@ section{
 .resume-rectangle{
     position: absolute;
     background-color: var(--main-color);
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
+    border-top-left-radius: 2%;
+    border-bottom-left-radius: 2%;
     width: 30%;
     height: 100%;
     top: 0;
@@ -182,7 +182,7 @@ section{
     position: relative;
 }
 .text-animation span::before{
-    content: 'Web Developer';
+    content: 'UI UX Designer';
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -204,15 +204,15 @@ section{
 @keyframes words{
     0%,
     20%{
-        content: 'Web Developer';
+        content: 'UI UX Designer';
     }
     21%,
     40%{
-        content: 'Web Designer'
+        content: 'Frontend Developer'
     }
     41%,
     60%{
-        content: 'Editor'
+        content: 'UX UI Designer'
     }
 }
 @keyframes typing{
@@ -293,7 +293,7 @@ section{
 }
 
 .about-content .text-animation span::before{
-    content: 'Web Developer';
+    content: 'UI UX Designer';
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -343,7 +343,29 @@ section{
 }
 .projects h2{
     margin-bottom: 8rem;
-    
+}
+.projects h1{
+    text-align: left;
+    font-size: 4rem;
+}
+.projects-container1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-container1 .projects-box{
+    position: relative;
+    height: 280px;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+}
+.projects-box:hover img{
+    transform: scale(1.1);
 }
 .projects-container{
     display: grid;
@@ -536,7 +558,10 @@ section{
     background: white;
     cursor: pointer;
 }
-
+.bar .progress-line.figma span{
+    width: 90%;
+    background-color: rgb(191, 0, 255); 
+}
 .bar .progress-line.Javascript span{
     width: 70%;
     background-color: gold;
@@ -687,6 +712,11 @@ section{
         grid-template-columns: repeat(1,1fr);
         margin: 0 5rem;
     }
+    .projects-container1{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 5rem;
+    }
 }
 @media(max-width:991px){
     header{
@@ -780,6 +810,9 @@ section{
     .projects h2{
         margin-bottom: 3rem;
     }
+    .projects h1{
+        margin-bottom: 3rem;
+    }
     .btn button:hover {
         background-color: #2815ff; 
     }
@@ -795,5 +828,4 @@ section{
         color: var(--main-color);
         border-bottom: 3px solid var(--main-color);
     }
-    
 }
