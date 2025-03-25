@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins",sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 :root{
@@ -421,48 +421,143 @@ section{
     font-weight: 800;
 }
 
-.experience{
+.experience {
     background: var(--second-bg-color);
 }
-.experience h2{
-    margin-bottom: 5rem;
-}
-.experience-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+
+.experience h2 {
+    margin-bottom: 4rem;
 }
 
-.experience-container .experience-box{
-    flex: 1 1 40rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    padding: 3rem 2rem 4rem;
-    height: 400px;
-    border-radius: 2rem;
-    text-align: center;
-    border: 0.2rem solid rgb(224, 224, 224);
+/* Main Timeline Container */
+.experience .contents {
+    padding: 0px 30px;
+    position: relative;
+}
+
+/* Vertical Timeline Line in the Middle */
+.experience .contents::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #bababa;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Experience Box */
+.experience .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
     cursor: pointer;
-    transition: 0.4s ease; 
+    transition: all 0.4s;
+    margin-bottom: 20px;
+    width: 45%;
 }
-.experience-container .experience-box:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02);
-    background-color: white;
-    color: black;
+
+/* Hover Effect */
+.experience .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
 }
-.experience-box h3{
-    font-size: 2.6rem;
+
+/* Remove the circles */
+.experience .box::before {
+    content: none;
 }
-.experience-box p{
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+
+/* Duration Label */
+.durationA-label {
+    display: inline-block;
+    background-color: #11a372;
+    color: #ffffff !important;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Add contrast */
 }
+.duration-label {
+    display: inline-block;
+    background-color: #a9a9a9;
+    color: #ffffff !important;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Add contrast */
+}
+
+
+/* Role Heading */
+.experience .box h4 {
+    color: var(--main-color);
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Description Text */
+.experience .box p {
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+
+/* Company Name & Logo */
+.company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Logo Styling */
+.company-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.companyb {
+    display: flex; /* Align logo & text in one line */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Space between logo and company name */
+    margin-top: 10px;
+    justify-content: flex-end; /* Align items to the right */
+    text-align: right;
+}
+
+/* Logo Styling */
+.companyb-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Aligning Boxes for Experience */
+.experience .contents .box.right {
+    left: 55%;
+    text-align: left;
+    border: 3px solid #11a372; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for better depth */
+}
+
+.experience .contents .box.left {
+    left: 0;
+    text-align: right;
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+
 .education{
     background: var(--second-bg-color);
 }
@@ -559,28 +654,69 @@ section{
     cursor: pointer;
 }
 .bar .progress-line.figma span{
-    width: 90%;
+    width: 95%;
     background-color: rgb(191, 0, 255); 
 }
-.bar .progress-line.Javascript span{
-    width: 70%;
-    background-color: gold;
-}
-.bar .progress-line.React span{
-    width: 60%;
-    background-color: rgb(35, 229, 209);
-}
-.bar .progress-line.MongoDb span{
-    width: 70%;
-    background-color: greenyellow;
+.bar .progress-line.AdobeXD span{
+    width: 85%;
+    background-color: rgb(255, 174, 0); 
 }
 .bar .progress-line.html span{
-    width: 90%;
+    width: 80%;
     background-color: orangered;
 }
 .bar .progress-line.css span{
-    width: 90%;
+    width: 80%;
     background-color: rgb(18, 121, 248);
+}
+.certificate{
+    background: var(--second-bg-color);
+}
+.certificate h2{
+    margin-bottom: 5rem;
+}
+.certificate-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.certificate-container .certificate-box{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 3rem 2rem 4rem;
+    height: 400px;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid rgb(224, 224, 224);
+    cursor: pointer;
+    transition: 0.4s ease; 
+}
+.certificate-container .certificate-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.certificate-box h3{
+    font-size: 2.6rem;
+}
+.certificate-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+h1c {
+    font-size: rem; /* Increases the font size */
+    font-weight: bold; /* Makes it bold */
+    cursor: pointer; /* Adds a pointer cursor */
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds spacing below */
 }
 .contact{
     background-color: var(--second-bg-color);
